@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+    <!-- order important -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+
+    <link href="js/videojs/video-js-cdn.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+
+    <!-- #GOOGLE FONT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+
+    <style>
+        body {
+            font-size: large;
+        }
+
+        .bar-holder {
+            padding: 3px 3px;
+        }
+
+        .widget-footer {
+            padding: 1px 1px 1px 1px;
+        }
+
+        .btn-label {
+            background: rgba(0, 0, 0, 0);
+        }
+
+        .smart-form {
+            margin-bottom: 6px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+        body {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+<video style="width:100%;" id="video" class="video-js vjs-default-skin" preload="none" crossorigin="true" width="100%" height="550" controls></video>
+
+<!-- END MAIN CONTENT -->
+
+<!--init common js in browser-->
+<script>
+	if(typeof module === 'object') {
+		window.module = module;
+		module = undefined;
+	}
+</script>
+
+<script src="js/jquery/jquery-3.2.1.js"></script>
+<script src="js/jquery/jquery-ui.js"></script>
+<script src="js/bootstrap/js/bootstrap.js"></script>
+<script src="js/plugin/select2/select2.min.js"></script>
+
+<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+<script src="js/notify/notify-combined.min.js"></script>
+
+<script src="js/videojs/video.js"></script>
+<script src="js/videojs/videojs-contrib-hls.js"></script>
+
+<script src="js/app.config.js"></script>
+<script src="js/init.js"></script>
+<script src="js/admin.js"></script>
+
+<script>require("./video")</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		pageSetUp();
+		const querystring = require('querystring');
+		const query = querystring.parse(global.location.search);
+		const queryData = JSON.parse(query['?data'])
+		const vidsrc = queryData.src;
+		$("#video").html("<source src='" + vidsrc + "' type='application/x-mpegURL'>");
+		let ply = videojs("video");
+		ply.play();
+	});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+    <!-- order important -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+
+    <!-- #GOOGLE FONT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+    <!-- Startup image for web apps -->
+    <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png"
+          media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png"
+          media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+    <style>
+        body {
+            font-size: large;
+        }
+
+        .bar-holder {
+            padding: 3px 3px;
+        }
+
+        .widget-footer {
+            padding: 1px 1px 1px 1px;
+        }
+
+        .btn-label {
+            background: rgba(0, 0, 0, 0);
+        }
+
+        .smart-form {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="jarviswidget" id="wid-id-search-filter" style="margin: 0 0 10px;"
+     data-widget-colorbutton="false"
+     data-widget-editbutton="false"
+     data-widget-togglebutton="false"
+     data-widget-deletebutton="false"
+     data-widget-fullscreenbutton="false"
+     data-widget-custombutton="false"
+     data-widget-collapsed="false"
+     data-widget-sortable="false"
+>
+
+    <div>
+        <div class="jarviswidget-editbox"></div>
+        <!-- widget content -->
+        <div class="widget-body no-padding" style="min-height: 10px">
+            <section id="toolbar-btns" class="">
+                <div class="row">
+                    <div class="btn-group btn-group-justified">
+                        <a id="btn-traffic-count" class="btn  btn-lg btn-labeled btn-primary">
+                            <span class="btn-label"><i class="glyphicon glyphicon-road"></i></span>Traffic Count
+                        </a>
+                        <a id="btn-stream-task" class="btn  btn-lg btn-labeled  btn-info">
+                            <span class="btn-label"><i class="glyphicon glyphicon-film"></i></span>Stream Task
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</div>
+<!-- end widget -->
+
+<!-- MAIN CONTENT -->
+<div id="content" class="">
+    <section id="widget-grid" class="">
+        <div id="content-traffic-count" class="hidden">
+            <div class="row">
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+                    <h1 class="page-title txt-color-blueDark"><i class="fa-fw fa fa-road"></i> Traffic Analytics</h1>
+                </div>
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+                    <div class="btn-group btn-group-vertical" role="group" aria-label="...">
+                        <div class="btn-group btn-group-lg" role="group">
+                            <button type="button" class="btn btn-lg btn-primary"><i class="fa-fw fa fa-folder-open"></i> Open Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="task-1rlgy5L9L1VF0UkFXZoc1W8JKRr">
+                <article class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="jarviswidget" id="wid-id-1rlgy5L9L1VF0UkFXZoc1W8JKRr"
+                         data-widget-colorbutton="false"
+                         data-widget-editbutton="false"
+                         data-widget-collapsed="false"
+                         data-widget-custombutton="false">
+
+                        <header>
+                            <span class="widget-icon"> <i class="fa fa-car"></i> </span>
+                            <h2>&nbsp;&nbsp;Traffic Count &nbsp;&nbsp;</h2>
+                        </header>
+
+                        <div>
+                            <div class="jarviswidget-editbox"></div>
+
+                            <div class="row">
+                                <form id="wizard-1" novalidate="novalidate">
+                                    <div id="bootstrap-wizard-1" class="col-sm-12">
+                                        <div class="form-bootstrapWizard">
+                                            <ul class="bootstrapWizard form-wizard">
+                                                <li class="active" data-target="#step1">
+                                                    <a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">Video</span> </a>
+                                                </li>
+                                                <li data-target="#step2">
+                                                    <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">Detection</span> </a>
+                                                </li>
+                                                <li data-target="#step3">
+                                                    <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">Tracking</span> </a>
+                                                </li>
+                                                <li data-target="#step4">
+                                                    <a href="#tab4" data-toggle="tab"> <span class="step">4</span> <span class="title">Counting</span> </a>
+                                                </li>
+                                            </ul>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="tab1">
+                                                <br>
+                                                <h3><strong>Step 1 </strong> - Video Selection</h3>
+
+                                            </div>
+                                            <div class="tab-pane" id="tab2">
+                                                <br>
+                                                <h3><strong>Step 2</strong> - Detection Selection</h3>
+                                            </div>
+                                            <div class="tab-pane" id="tab3">
+                                                <br>
+                                                <h3><strong>Step 3</strong> - Tracking Selection</h3>
+                                            </div>
+                                            <div class="tab-pane" id="tab4">
+                                                <br>
+                                                <h3><strong>Step 4</strong> - Traffic Count</h3>
+                                            </div>
+
+                                            <div class="form-actions">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <ul class="pager wizard no-margin">
+                                                            <li class="previous disabled">
+                                                                <a href="javascript:void(0);" class="btn btn-lg btn-default"> Previous </a>
+                                                            </li>
+                                                            <li class="next">
+                                                                <a href="javascript:void(0);" class="btn btn-lg txt-color-darken"> Next </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+
+        <div id="content-video-stream" class="hidden">
+
+            <article class="col-sm-12 col-md-12 col-lg-12">
+                <!-- Widget ID (each widget will need unique ID)-->
+                <div class="jarviswidget" id="wid-id-VF0UkFXZoc1W8JKRr"
+                     data-widget-colorbutton="false"
+                     data-widget-editbutton="false"
+                     data-widget-custombutton="false">
+                    <!-- widget options:
+                    usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+                    data-widget-colorbutton="false"
+                    data-widget-editbutton="false"
+                    data-widget-togglebutton="false"
+                    data-widget-deletebutton="false"
+                    data-widget-fullscreenbutton="false"
+                    data-widget-custombutton="false"
+                    data-widget-collapsed="true"
+                    data-widget-sortable="false"
+                    -->
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-file-movie-o"></i></span>
+                        <h2>&nbsp;&nbsp;Video Stream Task&nbsp;&nbsp;</h2>
+                    </header>
+                    <div>
+                        <div class="jarviswidget-editbox"></div>
+                        <!-- widget content -->
+                        <div class="widget-body">
+                            <!-- widget content -->
+                            <div class="widget-body no-padding">
+                                <form id="checkout-form" class="smart-form" novalidate="novalidate">
+                                    <fieldset>
+                                        <div class="row">
+                                            <section class="col col-10">
+                                                <label class="label">Start Date (UTC):</label>
+                                                <label class="input"> <i class="icon-append fa fa-calendar"></i>
+                                                    <input type="text" name="startdate" id="startdate" placeholder="Expected start date">
+                                                </label>
+                                            </section>
+                                            <section class="col col-2">
+                                                <div class="form-group">
+                                                    <label class="label">Start Time (UTC):</label>
+                                                    <div class="input-group">
+                                                        <input class="form-control" id="start-time" type="text" placeholder="Select time" data-autoclose="true">
+                                                        <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="row">
+                                            <section class="col col-10">
+                                                <label class="label">Stop Date (UTC):</label>
+                                                <label class="input"> <i class="icon-append fa fa-calendar"></i>
+                                                    <input type="text" name="stopdate" id="stopdate" placeholder="Expected finish date">
+                                                </label>
+                                            </section>
+                                            <section class="col col-2">
+                                                <div class="form-group">
+                                                    <label class="label">Start Time (UTC):</label>
+                                                    <div class="input-group">
+                                                        <input class="form-control" id="stop-time" type="text" placeholder="Select time" data-autoclose="true">
+                                                        <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <section>
+                                            <label class="label">Video Stream</label>
+                                            <label class="textarea">
+                                                <textarea id="video-src" rows="3" name="info" placeholder="Stream URL"></textarea>
+                                            </label>
+                                            <div class="note note-error">Copy paste video URL (Source URL).</div>
+                                        </section>
+                                    </fieldset>
+
+                                    <footer>
+                                        <button id="btn-save-stream-task" type="button" class="btn btn-lg btn-success">
+                                            Save Video Stream Task
+                                        </button>
+                                        <button id="btn-preview-stream" type="button" class="btn btn-xl btn-info">
+                                            Preview Video Stream
+                                        </button>
+                                    </footer>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end widget content -->
+
+                    </div>
+                    <!-- end widget div -->
+
+                </div>
+                <!-- end widget -->
+            </article>
+
+        </div>
+    </section>
+
+</div>
+
+
+<!-- END MAIN CONTENT -->
+
+<!--init common js in browser-->
+<script>
+	if(typeof module === 'object') {
+		window.module = module;
+		module = undefined;
+	}
+</script>
+
+<script src="js/jquery/jquery-3.2.1.js"></script>
+<script src="js/jquery/jquery-ui.js"></script>
+<script src="js/bootstrap/js/bootstrap.js"></script>
+<script src="js/plugin/select2/select2.min.js"></script>
+
+<script src="js/plugin/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<script src="js/plugin/dygraphs/demo-data.min.js"></script>
+<script src="js/plugin/dygraphs/dygraph-combined.min.js"></script>
+<script src="js/plugin/knob/jquery.knob.js"></script>
+<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+
+<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+<script src="js/notify/notify-combined.min.js"></script>
+<script src="js/jquery/moment.js"></script>
+
+<script src="js/plugin/ion-slider/ion.rangeSlider.min.js"></script>
+<script src="js/plugin/clockpicker/clockpicker.min.js"></script>
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+
+<script src="js/app.config.js"></script>
+<script src="js/init.js"></script>
+<script src="js/admin.js"></script>
+
+<script>
+	let _ = require('lodash');
+	require('./renderer');
+</script>
+
+<script type="text/javascript">
+	//let _               = require("lodash");
+	//let async           = require("async");
+	//const electron      = require('electron');
+	//const eng           = require("./engine");
+	//const {ipcRenderer} = electron;
+	const videoStreamTab = 'content-video-stream';
+	const trafficCountTab = 'content-traffic-count';
+	const mainTabs = [trafficCountTab, videoStreamTab]
+
+	$(document).ready(function() {
+		pageSetUp();
+		$("#btn-traffic-count").on("click", btn_traffic_count)
+		$("#btn-stream-task").on("click", btn_stream_task)
+		$("#range-slider-1").ionRangeSlider({
+			min: 0,
+			max: 5000,
+			from: 1000,
+			to: 4000,
+			type: 'double',
+			step: 1,
+			postfix: " &euro;",
+			prettify: false,
+			grid: true,
+			inputValuesSeparator: ';'
+		});
+
+		$('#start-time').clockpicker({placement: 'left', donetext: 'Done'});
+		$('#stop-time').clockpicker({placement: 'left', donetext: 'Done'});
+
+        
+		$('#startdate').datepicker({
+			dateFormat: 'dd/mm/yy',
+			prevText: '<i class="fa fa-chevron-left"></i>',
+			nextText: '<i class="fa fa-chevron-right"></i>',
+			onSelect: function(selectedDate) {
+				$('#stopdate').datepicker('option', 'minDate', selectedDate);
+			}
+		});
+
+		$('#stopdate').datepicker({
+			dateFormat: 'dd/mm/yy',
+			prevText: '<i class="fa fa-chevron-left"></i>',
+			nextText: '<i class="fa fa-chevron-right"></i>',
+			onSelect: function(selectedDate) {
+				$('#startdate').datepicker('option', 'maxDate', selectedDate);
+			}
+		});
+
+		$("#btn-preview-stream").on('click', function(){
+
+        })
+
+	});
+
+	function btn_traffic_count(e) {
+		e.preventDefault();
+		enable_main_tab(trafficCountTab);
+	}
+
+	function btn_stream_task(e) {
+		e.preventDefault();
+		enable_main_tab(videoStreamTab);
+	}
+
+	function enable_main_tab(showId) {
+		mainTabs.forEach((id) => {
+			let $selector = $(`#${id}`);
+			if(id === showId) {
+				$selector.removeClass('hidden');
+				return;
+			}
+			$selector.addClass('hidden');
+		})
+	}
+
+
+</script>
+
+
+<script>
+	$(function() {
+		pageSetUp();
+	});
+</script>
+
+</body>
+
+</html>
