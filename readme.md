@@ -1,5 +1,5 @@
-# DPM Desktop UI
-Desktop UI using [Electron.js](https://www.electronjs.org/)
+# Vehicle tracker Desktop UI
+Desktop UI implementation in [Electron.js](https://www.electronjs.org/)
 
 
 # UI Requirements 
